@@ -1,0 +1,331 @@
+
+
+body { /*corpo da página*/
+    font-size: 62.5%; /*tamanho da fonte em porcentagem*/
+    line-height: 1.5; /*espaçamento entre linhas (altura entre as linhas do texto)*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*tipo da fonte*/
+	/*background: url('../imagem/fundo.jpg'); /*exibe uma imgem de fundo*/ 
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a { /*link da página*/
+    text-decoration: none; /*decoração do texto: nenhuma*/
+    font-size: 1.6em; /*tamanho da fonte*/
+}
+
+a:hover { /*mouse sobre um link*/
+    text-decoration: underline; /*decoração do texto: sublinhado*/
+}
+
+.container { /*especifica onde será exibido todo o conteúdo da página*/
+    max-width: 1128px; /*largura máxima em pixel(px)*/
+	height: 640px; /*altura em pixel(px)*/
+    margin: 0 auto; /*margem centralizada automática*/
+	background-color: lightgray; /*cor de fundo: cinza claro*/
+	box-shadow: 10px 10px 5px orange; /*caixa sombreda*/
+	border-radius:10px; /*borda arredondada*/
+	/*background: rgba(135,135,135,0.5); /*deixa o container cinza transparente*/
+}
+
+img, /*imagem*/
+picture, /*figura*/
+video, /*video*/
+embed {
+    max-width: 100%; /*largura máxima em porcentagem(%)*/
+}
+
+.banner { /*retângulo localizado na parte superior da página*/
+    width: 100%; /*largura em porcentagem*/
+    height: 120px; /*altura em pixel*/
+    margin-top: 0em; /*margem do topo (superior)*/
+	background-color: lightyellow; /*cor de fundo: amarelo claro*/
+	font-family: "Bauhaus 93"; /*tipo da fonte*/
+	font-size: 8em; /*tamanho da fonte*/
+	text-align: center; /*alinhamento do texto: ao centro*/
+	color: orange; /*cor do texto: laranja*/
+}
+
+.logo { /*logotipo do banner*/
+    float: left; /*flutua(posição) à esquerda*/
+    width: 10.63829787%; /*largura em porcentagem =(120px/1128px)*100 */ 
+	min-width: 50px; /*largura minima em pixel*/
+	min-height: 50px; /*altura minima em pixel*/
+	margin-top: 0px; /*margem do topo (superior) em pixel*/
+}
+
+.menu { /*menu de navegação da pagina*/
+	background-color: orange; /*cor de fundo: laranja*/
+    width: 100%; /*largura em porcentagem*/
+	height: 30px; /*altura em pixel*/
+    float: left; /*flutua(posição) à esquerda*/
+	border-radius: 10px; /*borda arredondada em pixel*/
+}
+
+.menu ul { /*atribuição da lista do menu*/
+	text-align: center; /*alinhamento do texto ao centro*/
+}
+
+.menu li { /*lista do menu*/
+	display: inline-block; /*visualização: bloco alinhado na horizontal*/
+    font-size: 1.2em; /*tamanho da fonte*/
+    margin-left: 2em; /*espaçamento da margem esquerda*/
+	margin-right: 2em; /*espaçamento da margem direita*/
+    margin-top: -10em; /*espaçamento da margem superior*/
+	text-align: center; /*alinhamento do texto ao centro*/
+	padding: 3em 3em 3em 3em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+}
+
+.menu li a { /*links da lista do menu*/
+    color: white; /*cor do texto: branco*/
+}
+
+.menu li a:hover{ /*mouse sobre um link da lista de menu*/
+	background-color: lightyellow; /*cor de fundo do link: branco*/
+	color: red; /*cor do texto*/
+}
+
+.coluna { /*colunas do corpo da página*/
+    width: 25%; /*largura em porcentagem*/
+	height: 450px; /*altura em pixel*/
+    float: left; /*flutua(posição) à esquerda*/
+	position: relative; /*posição: relativa*/
+	text-align: center; /*alinhamento do texto ao centro*/
+	padding: 2em 2em 2em 2em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	
+}
+
+.coluna h2{ /*cabeçalho das colunas*/
+	text-align: center; /*alinhamento do texto ao centro*/
+    font-size: 2.4em; /*tamanho da fonte*/
+    font-weight: 200; /*espessura da fonte*/
+	color: red; /*cor da fonte: vermelha*/
+	position: relative; top: -20px; /*posição: relativo; superior: em pixel*/
+}
+
+.coluna 	p { /*paragrafo do texto da coluna*/
+    font-size: 1.6em; /*tamanho da fonte*/
+	position: relative; top: -30px; /*posição: relativo; superior: em pixel*/
+}
+
+.footer { /*rodapé da página*/
+    width: 100%; /*largura em porcentagem*/	
+	height: 20px; /*altura em pixel*/
+    margin-top: 2em; /*margem superior*/
+    margin-bottom: 2em; /*margem inferior*/
+    clear: both; /*limpar: ambos ???*/
+	background-color: orange; /*cor de fundo: laranja*/
+	text-align: left; /*alinhamento do texto a esquerda*/
+	font-weight: bold; /*espessura da fonte: negrito*/
+	padding: 0em 1em 0em 1em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	position: relative; top: -40px; /*posição: relativo; superior: em pixel*/
+}
+
+/* ==========================================================================
+   Media Queries = responsividade
+   ========================================================================== */
+
+
+@media screen and (max-width: 1128px) { /*largura maxima da tela = 1128 pixel*/
+
+    .container { /*conteudo da página*/
+		width: 100%; /*largura em porcentagem*/
+        padding: 0 2.4em 0 2.4em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+    }
+	
+	.footer { /*rodapé da página*/
+		position: relative; top: 0px; /*posição do rodapé: relativo; superior em pixel*/
+	}
+}
+
+@media screen and (max-width: 970px) { /*largura maxima da tela = 970 pixel*/
+	
+	.menu li { /*lista do menu*/
+		font-size: 1.0em; /*tamanho da fonte*/
+	}
+
+	.coluna h2{ /*cabeçalho*/
+		font-size: 1.6em; /*tamanho da fonte*/
+		font-weight: 200; /*expessura da fonte*/
+	}
+
+	.coluna 	p { /*paragrafo das colunas*/
+		font-size: 1.4em; /*tamanho da fonte*/
+	}
+	
+}
+
+@media screen and (max-width: 810px) { /*largura maxima da tela = 810 pixel*/
+	
+	.banner { /*retangulo superior da página*/
+		height: 80px; /*altura em pixel*/
+		font-size: 6em; /*tamanho da fonte*/
+	}
+
+	.menu li { /*lista do menu*/
+		padding: 2em 2em 2em 2em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	}
+	
+	.coluna img{ /*imagem das colunas*/
+		width: 100%; /*largura em porcentagem*/
+		height: 100px; /*altura em pixel*/
+	}
+	
+	.coluna 	p { /*paragrafo das colunas*/
+		font-size: 1.2em; /*tamanho da fonte*/
+	}
+	
+	.footer { /*rodapé da página*/
+		position: relative; top: 50px; left: 0px; /*posição: relativa; superior em pixel; esquerda em pixel*/
+	}
+}    
+
+@media screen and (max-width: 705px) { /*largura maxima da tela = 705 pixel*/
+	
+	.container { /*conteudo da página*/
+		height: 800px; /*altura em pixel*/
+    }
+	
+	.banner { /*retangulo superior da página*/
+		height: 60px; /*altura em pixel*/
+		font-size: 4em; /*tamanho da fonte*/
+	}
+	
+	.menu li { /*lista do menu*/
+		margin-left: -8em; /*margem esquerda*/
+		margin-right: 0em; /*margem direita*/
+		margin-top: -10em; /*margem superior*/
+		padding: 1em 2em 1em 8em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	}
+	
+	.coluna { /*colunas do corpo da página*/
+		width: 50%; /*largura em porcentagem*/
+		height: 300px; /*altura em pixel*/
+		padding: 1em 1em 1em 1em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	}
+	
+	.footer { /*rodapé da página*/
+		position: relative; top: 70px; left: 0px; /*posição: relativo; superior em pixel; esquerda em pixel*/
+	}
+}
+
+@media screen and (max-width: 545px) { /*largura maxima da tela = 545 pixel*/
+
+		.coluna{ /*colunas do corpo da página*/
+			position: relative; top: -15px; /*posição: relativa; superior em pixel*/
+		}
+		
+		.coluna img { /*imagem das coluna*/
+			position: relative; top: 10px; /*posição: relativa; superior em pixel*/
+			padding: 2em 2em 1em 2em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+		}
+		
+		.coluna p { /*parágrafo das colunas*/
+			position: relative; top: -12px; /*posição: relativa; superior em pixel*/
+		}
+		
+		.coluna h2{ /*cabeçalho das colunas*/
+			position: relative; top: -10px; /*posição: relativa; superior em pixel*/
+		}
+}
+
+@media screen and (max-width: 485px) { /*largura maxima da tela = 485 pixel*/
+	
+	.container{ /*conteudo da página*/
+		height: 1350px; /*altura em pixel*/
+	}
+	
+	.banner { /*retangulo superior da página*/
+		height: 80px; /*altura em pixel*/
+		font-size: 3.2em; /*tamanho da fonte*/
+	}
+	
+	.menu ul { /*declaração da lista do menu*/
+		text-align: left; /*alinhamento do texto*/
+	}
+	
+	.menu li { /*lista do menu*/
+		font-size: 0.8em; /*tamanho da fonte*/
+		margin-left: -12em; /*margem esquerda*/
+		margin-right: 0em; /*margem direita*/
+		margin-top: -10em; /*margem superior*/
+		text-align: center; /*alinhamento do texto*/
+		padding: 1em 5em 1em 8.5em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+		font-weight: bold; /*espessura da fonte*/
+	}
+	
+	.coluna{ /*colunas do corpo da página*/
+		width: 100%; /*largura em pixel*/
+		position: relative; top: -80px; /*posição: relativa; superior em pixel*/
+	}
+	
+	.coluna img { /*imagem das colunas*/
+		width: 100%; /*largura em porcentagem*/
+		height: 80%; /*altura em porcentagem*/
+		padding: 10em 2em 1em 2em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	}
+	
+	.footer { /*rodapé da página*/
+		position: relative; top: 0px; /*posição: relativa; superior em pixel*/
+	}
+}
+
+@media screen and (max-width: 394px) { /*largura maxima da tela = 394*/
+	
+	.container{ /*conteudo da página*/
+		height: 1450px; /*altura em pixel*/
+	}
+	
+	.banner{ /*retangulo superior da página*/
+		height: 100px; /*altura em pixel*/
+		font-size: 3.4em; /*tamanho da fonte*/
+	}
+	
+	.menu{ /*menu da página*/
+		height: 120px; /*altura em pixel*/
+		margin-top: 2px; /*margem superior em pixel*/
+	}
+	
+	.menu li{ /*lista do menu*/
+		font-size: 1.2em; /*tamanho da fonte*/
+		margin-left: 0em; /*margem esquerda*/
+		padding: 0em 3em 1em 3em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+	}
+	
+	.coluna img { /*imagem da colunas*/
+		height: 100%; /*altura em porcentagem*/
+		padding: 10em 2em 6em 2em; /*distanciamento entre o texto (superior direita inferior esquerda)*/
+		margin-top: -3em; /*margem superior*/
+		position: relative; top: 10px; /*posição: relativa; superior em pixel*/
+	}
+	
+	.coluna h2{ /*cabeçalho das colunas*/
+		position: relative; top: -60px; /*posição: relativa; superior em pixel*/
+	}
+		
+	.coluna p { /*parágrafo das colunas*/
+		position: relative; top: -70px; /*posição: relativa; superior em pixel*/
+	}
+	
+	.footer { /*rodapé da página*/
+		position: relative; top: -30px; /*posição: relativa; superior em pixel*/
+	}
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
